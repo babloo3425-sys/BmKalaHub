@@ -414,6 +414,11 @@ whatsappBtn.addEventListener(
         ? data.bookings.length
         : 0;
 
+    /* AUTO OPEN DASHBOARD */
+
+       window.location.href =
+       "dashboard.html";
+
     } catch(err){
 
         console.log(err);
