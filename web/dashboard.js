@@ -36,23 +36,46 @@
         const artist =
         data.artist;
 
+         const viewCount =
+
          document.getElementById(
-         "viewsCount"
-         ).innerText =
+         "viewCount"
+        );
+
+         if(viewCount){
+
+         viewCount.innerText =
 
          artist.views || 0;
 
+        }
+         const followerCount =
+
          document.getElementById(
-         "followersCount"
-         ).innerText =
+         "followerCount"
+        );
+
+         if(followerCount){
+
+         followerCount.innerText =
 
          artist.followers || 0;
 
-          document.getElementById(
-          "reviewsCount"
-          ).innerText =
+        }
 
-          artist.reviews || 0;
+         const reviewCount =
+
+         document.getElementById(
+         "reviewCount"
+        );
+
+         if(reviewCount){
+
+         reviewCount.innerText =
+
+         artist.reviews || 0;
+
+         }
 
         if(!artist){
 
