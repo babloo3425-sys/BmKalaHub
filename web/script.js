@@ -140,7 +140,7 @@ async function loadArtists(){
 
         const res = await fetch(
 
-        "http://localhost:5000/api/artist/all"
+        "https://bmkalahub-api.onrender.com/api/artist/all"
 
         );
 

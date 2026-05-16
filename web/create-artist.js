@@ -82,7 +82,7 @@ async (e) => {
 
         const res = await fetch(
 
-        "http://localhost:5000/api/artist/create",
+        "https://bmkalahub-api.onrender.com/api/artist/create",
 
         {
 

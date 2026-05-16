@@ -133,7 +133,7 @@ whatsappBtn.addEventListener(
 
         const res = await fetch(
 
-        "http://localhost:5000/api/booking/create",
+        "https://bmkalahub-api.onrender.com/api/booking/create",
 
         {
 
@@ -188,7 +188,7 @@ whatsappBtn.addEventListener(
 
         await fetch(
 
-        `http://localhost:5000/api/artist/view/${artist._id}`,
+        `https://bmkalahub-api.onrender.com/api/artist/view/${artist._id}`,
 
         {
 
@@ -250,7 +250,7 @@ whatsappBtn.addEventListener(
 
         const res = await fetch(
 
-        `http://localhost:5000/api/artist/follow/${artist._id}`,
+        `https://bmkalahub-api.onrender.com/api/artist/follow/${artist._id}`,
 
         {
 
@@ -351,7 +351,7 @@ whatsappBtn.addEventListener(
 
         const res = await fetch(
 
-        `http://localhost:5000/api/artist/review/${artist._id}`,
+        `https://bmkalahub-api.onrender.com/api/artist/review/${artist._id}`,
 
         {
 
@@ -399,7 +399,7 @@ whatsappBtn.addEventListener(
 
         const res = await fetch(
 
-        `http://localhost:5000/api/booking/my/${artist.userId}`
+        `https://bmkalahub-api.onrender.com/api/booking/my/${artist.userId}`
 
         );
 
@@ -486,7 +486,7 @@ starBtns.forEach((btn) => {
 
             const res = await fetch(
 
-            `http://localhost:5000/api/artist/rate/${artist._id}`,
+            `https://bmkalahub-api.onrender.com/api/artist/rate/${artist._id}`,
 
             {
 
@@ -592,7 +592,7 @@ starBtns.forEach((btn) => {
 
         const res = await fetch(
 
-        "http://localhost:5000/api/review/add",
+        "https://bmkalahub-api.onrender.com/api/review/add",
 
         {
 
@@ -647,7 +647,7 @@ starBtns.forEach((btn) => {
 
         const res = await fetch(
 
-        `http://localhost:5000/api/review/${artist._id}`
+        `https://bmkalahub-api.onrender.com/api/review/${artist._id}`
 
         );
 
@@ -710,7 +710,7 @@ starBtns.forEach((btn) => {
 
                     await fetch(
 
-                    `http://localhost:5000/api/review/delete/${reviewId}`,
+                    `https://bmkalahub-api.onrender.com/api/review/delete/${reviewId}`,
 
                     {
 
@@ -748,7 +748,7 @@ loadReviews();
 
         const res = await fetch(
 
-        `http://localhost:5000/api/artist/single/${artist._id}`
+        `https://bmkalahub-api.onrender.com/api/artist/single/${artist._id}`
 
         );
 

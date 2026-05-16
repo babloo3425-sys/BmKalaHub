@@ -33,7 +33,7 @@ async function loadArtist(){
 
         const res = await fetch(
 
-        `http://localhost:5000/api/artist/my/${user._id}`
+        `https://bmkalahub-api.onrender.com/api/artist/my/${user._id}`
 
         );
 
@@ -133,7 +133,7 @@ async () => {
 
         const res = await fetch(
 
-        `http://localhost:5000/api/artist/update/${user._id}`,
+        `https://bmkalahub-api.onrender.com/api/artist/update/${user._id}`,
 
         {
 
