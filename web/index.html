@@ -1,0 +1,228 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+  <meta charset="UTF-8">
+
+  <meta name="viewport"
+        content="width=device-width, initial-scale=1.0">
+
+  <title>BmKalaHub</title>
+
+  <link rel="stylesheet"
+        href="style.css">
+
+</head>
+<body>
+
+  <div id="loader">
+
+  <div class="spinner"></div>
+
+  </div>
+  <!-- HEADER -->
+
+  <header class="header">
+
+    <div class="logo">
+
+    <img
+      src="assets/images/logo.png"
+      class="siteLogo">
+
+    <span>
+
+       BmKalaHub
+
+    </span>
+
+    </div>
+
+    <nav>
+
+      <button
+        class="navBtn"
+        id="artistsBtn">
+        Artists
+      </button>
+
+      <button
+       class="navBtn"
+       id="loginBtn">
+       Login
+      </button>
+
+      <span
+        id="navbarUser"
+        class="navbarUser">
+
+       </span>
+
+      <button
+      class="navBtn"
+      id="logoutBtn">
+      Logout
+      </button>
+      
+      <button
+        class="navBtn"
+        id="dashboardBtn">
+
+        Dashboard
+
+      </button>
+
+      <button
+      class="navBtn"
+      id="createArtistBtn">
+
+      Create Artist
+
+      </button>
+
+    </nav>
+
+  </header>
+
+  <!-- HERO -->
+
+  <section class="hero">
+
+    <h1>
+      Discover Local Artists
+    </h1>
+
+    <p>
+      Singers,Musician,Performer, DJs, Dancers,
+      Photographers, Bands and
+      Event Artists near you.
+    </p>
+
+    <button
+      class="exploreBtn"
+      id="exploreBtn">
+      Explore Artists
+     </button>
+
+  </section>
+
+  <!-- CATEGORIES -->
+
+  <section class="categories">
+
+    <div
+      class="card"
+      data-category="Musician">
+      Musician
+    </div>
+
+    <div 
+    class="card"
+    data-category="Singer">
+      Singer
+    </div>
+
+    <div
+     class="card"
+     data-category="Performer">
+
+     Performer
+
+    </div>
+
+    <div class="card"
+    data-category="DJ">
+      DJ
+    </div>
+
+    <div class="card"
+    data-category="Photographer">
+      Photographer
+    </div>
+
+    <div class="card"
+    data-category="Dancer">
+      Dancer
+    </div>
+
+    <div class="card"
+    data-category="Band">
+      Band
+    </div>
+
+    <div class="card"
+     data-category="Decorator">
+      Decorator
+    </div>
+
+  </section>
+
+    <!-- ARTISTS -->
+
+   <section
+     class="artistsSection"
+     id="artistsSection">
+
+     <input
+       type="text"
+       id="searchInput"
+      placeholder="Search artists...">
+
+       <h2 id="featuredTitle">
+
+       Featured Artists
+
+       <span>⭐</span>
+
+      </h2>
+
+       <div
+       class="artistsGrid"
+      id="featuredArtistsGrid">
+
+       </div>
+
+      <h2 id="artistsTitle">
+          Popular Artists
+     </h2>
+
+  <div
+    class="artistsGrid"
+    id="artistsGrid">
+
+  <h2 class="loadingText">
+
+    Loading artists...
+
+  </h2>
+
+ </div>
+
+ </section>
+
+ <footer class="footer">
+
+  <a href="about.html">
+
+    About
+
+  </a>
+
+  <a href="privacy.html">
+
+    Privacy
+
+  </a>
+
+  <a href="license.html">
+
+    License
+
+  </a>
+
+ </footer>
+ 
+ <script src="script.js"></script>
+
+ </body>
+ </html>
