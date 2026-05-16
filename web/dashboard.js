@@ -430,8 +430,6 @@ loadBookings();
 
             );
 
-            loadBookings();
-
             document.getElementById(
             "followerCount"
             ).innerText =
@@ -443,6 +441,14 @@ loadBookings();
             ).innerText =
 
             artist.reviews || 0;
+
+            document.getElementById(
+            "viewCount"
+            ).innerText =
+
+            artist.views || 0;
+
+            loadBookings();
 
         }
 

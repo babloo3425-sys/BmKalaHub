@@ -539,9 +539,9 @@ async (req, res) => {
 
 });
 
-      /* GET SINGLE ARTIST */
+  /* GET SINGLE ARTIST */
 
-     router.get(
+      router.get(
 
       "/single/:id",
 
