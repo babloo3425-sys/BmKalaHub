@@ -1,7 +1,7 @@
- const user =
-   JSON.parse(
-   localStorage.getItem("user")
-  );
+ let artist =
+JSON.parse(
+localStorage.getItem("artist")
+);
 
  const dashboardArtist =
   document.getElementById(
@@ -400,3 +400,58 @@ async function loadBookings(){
 }
 
 loadBookings();
+
+/* REFRESH DASHBOARD */
+
+    async function refreshDashboard(){
+
+    try {
+
+        const res = await fetch(
+
+        `https://bmkalahub-api.onrender.com/api/artist/single/${artist._id}`
+
+        );
+
+        const data =
+        await res.json();
+
+        if(data.success){
+
+            artist = data.artist;
+
+            localStorage.setItem(
+
+            "artist",
+
+            JSON.stringify(
+            artist
+            )
+
+            );
+
+            loadBookings();
+
+            document.getElementById(
+            "followerCount"
+            ).innerText =
+
+            artist.followers || 0;
+
+            document.getElementById(
+            "reviewCount"
+            ).innerText =
+
+            artist.reviews || 0;
+
+        }
+
+    } catch(err){
+
+        console.log(err);
+
+    }
+
+}
+
+refreshDashboard();
