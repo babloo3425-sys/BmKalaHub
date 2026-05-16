@@ -83,12 +83,14 @@
 
         res.json({
 
-            success:true,
+         success:true,
 
-            message:
-            "Artist profile created"
+           message:
+          "Artist profile created",
 
-        });
+          artist:newArtist
+
+       });
 
     } catch(err){
 

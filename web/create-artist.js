@@ -95,6 +95,16 @@ async (e) => {
         const data =
         await res.json();
 
+        localStorage.setItem(
+
+        "artist",
+
+        JSON.stringify(
+        data.artist
+       )
+
+    );
+
         artistMessage.innerText =
         data.message;
 
