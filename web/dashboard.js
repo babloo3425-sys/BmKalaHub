@@ -11,7 +11,7 @@
  "user"
  )
 
- );
+);
 
  const dashboardArtist =
   document.getElementById(
@@ -36,46 +36,23 @@
         const artist =
         data.artist;
 
-         const viewCount =
-
          document.getElementById(
-         "viewCount"
-        );
-
-         if(viewCount){
-
-         viewCount.innerText =
+         "viewsCount"
+         ).innerText =
 
          artist.views || 0;
 
-        }
-         const followerCount =
-
          document.getElementById(
-         "followerCount"
-        );
-
-         if(followerCount){
-
-         followerCount.innerText =
+         "followersCount"
+         ).innerText =
 
          artist.followers || 0;
 
-        }
+          document.getElementById(
+          "reviewsCount"
+          ).innerText =
 
-         const reviewCount =
-
-         document.getElementById(
-         "reviewCount"
-        );
-
-         if(reviewCount){
-
-         reviewCount.innerText =
-
-         artist.reviews || 0;
-
-         }
+          artist.reviews || 0;
 
         if(!artist){
 
@@ -463,24 +440,46 @@ loadBookings();
 
             );
 
-            document.getElementById(
-            "followerCount"
-            ).innerText =
+            const followerCount =
 
-            artist.followers || 0;
+document.getElementById(
+"followerCount"
+);
 
-            document.getElementById(
-            "reviewCount"
-            ).innerText =
+if(followerCount){
 
-            artist.reviews || 0;
+    followerCount.innerText =
 
-            document.getElementById(
-            "viewCount"
-            ).innerText =
+    artist.followers || 0;
 
-            artist.views || 0;
+}
 
+            const reviewCount =
+
+document.getElementById(
+"reviewCount"
+);
+
+if(reviewCount){
+
+    reviewCount.innerText =
+
+    artist.reviews || 0;
+
+}
+            const viewCount =
+
+document.getElementById(
+"viewCount"
+);
+
+if(viewCount){
+
+    viewCount.innerText =
+
+    artist.views || 0;
+
+}
             loadBookings();
 
         }
