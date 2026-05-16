@@ -159,7 +159,7 @@ whatsappBtn.addEventListener(
 
         });
 
-    const data =
+        const data =
         await res.json();
 
         loadReviews();
@@ -171,6 +171,12 @@ whatsappBtn.addEventListener(
        document.getElementById(
        "reviewText"
       ).value = "";
+
+    /* AUTO OPEN DASHBOARD */
+
+      window.location.href =
+      "dashboard.html";
+
 
     } catch(err){
 
@@ -405,9 +411,6 @@ whatsappBtn.addEventListener(
 
         const data =
         await res.json();
-
-        window.location.href =
-        "dashboard.html";
 
         document.getElementById(
         "profileBookings"
