@@ -406,6 +406,9 @@ whatsappBtn.addEventListener(
         const data =
         await res.json();
 
+        window.location.href =
+        "dashboard.html";
+
         document.getElementById(
         "profileBookings"
         ).innerText =
@@ -414,10 +417,6 @@ whatsappBtn.addEventListener(
         ? data.bookings.length
         : 0;
 
-    /* AUTO OPEN DASHBOARD */
-
-       window.location.href =
-       "dashboard.html";
 
     } catch(err){
 
