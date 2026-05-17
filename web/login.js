@@ -78,6 +78,29 @@ async () => {
 
             );
 
+         const artistRes =
+           await fetch(
+
+           `https://bmkalahub-api.onrender.com/api/artist/my/${data.user._id}`
+
+          );
+
+          const artistData =
+          await artistRes.json();
+
+          if(artistData.artist){
+
+           localStorage.setItem(
+
+          "artist",
+
+           JSON.stringify(
+           artistData.artist
+         )
+
+        );
+
+      }
             setTimeout(() => {
 
                 window.location.href =
