@@ -93,29 +93,29 @@ async (e) => {
         });
 
         const data =
-        await res.json();
+         await res.json();
 
-        localStorage.setItem(
+         localStorage.setItem(
 
-        "artist",
+         "artist",
 
-        JSON.stringify(
-        data.artist
-       )
+          JSON.stringify(
+          data.artist
+        )
 
-    );
+        );
 
-        artistMessage.innerText =
-        data.message;
+          artistMessage.innerText =
+          data.message;
 
-        window.location.href =
-       "index.html";
+          window.location.href =
+         "dashboard.html";
 
-    } catch(err){
+     } catch(err){
 
         artistMessage.innerText =
         "Server Error";
 
-    }
+      }
 
-});
+    });
