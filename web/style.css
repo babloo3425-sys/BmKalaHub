@@ -1252,7 +1252,9 @@ textarea{
 
   padding:16px;
 
-  margin-top:15px;
+  margin-top:18px;
+
+  margin-bottom:18px;
 
   border:none;
 
@@ -1262,7 +1264,7 @@ textarea{
 
   background:#1e1e1e;
 
-  color:white;
+  color:#cccccc;
 
   font-size:16px;
 
