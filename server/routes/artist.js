@@ -42,12 +42,12 @@
 
         router.post(
 
-        "/create",
+       "/create",
 
-       upload.single("image"),
+      upload.single("image"),
 
-       async (req, res) => {
-
+      async (req, res) => {
+ 
      try {
 
         const {
@@ -62,11 +62,12 @@
 
         const image =
 
-        req.file ?
+        req.file
 
-        req.file.path :
+        ? req.file.path
 
-        "";
+        : "";
+
         const newArtist =
         new Artist({
 
@@ -83,21 +84,19 @@
 
         res.json({
 
-         success:true,
+            success:true,
 
-           message:
-          "Artist profile created",
+            artist:newArtist
 
-          artist:newArtist
-
-       });
+        });
 
     } catch(err){
+
+        console.log(err);
 
         res.json({
 
             success:false,
-
             message:err.message
 
         });
