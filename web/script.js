@@ -100,9 +100,10 @@ if(!user){
 
 logoutBtn.addEventListener("click", () => {
 
-    localStorage.removeItem("user");
+    localStorage.clear();
 
-    window.location.reload();
+    window.location.href =
+    "login.html";
 
 });
 
