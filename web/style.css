@@ -18,11 +18,13 @@ body{
   justify-content:space-between;
   align-items:center;
   padding:14px 20px;
+  padding-top:28px;
   background:#161616;
   position:sticky;
   top:0;
   z-index:100;
 }
+
 .logo{
   font-size:24px;
   font-weight:bold;
