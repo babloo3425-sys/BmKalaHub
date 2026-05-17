@@ -20,7 +20,7 @@
 
  /* LOAD MY ARTIST */
 
- async function loadMyArtist(){
+async function loadMyArtist(){
 
     try {
 
@@ -36,23 +36,29 @@
         const artist =
         data.artist;
 
-         document.getElementById(
-         "viewsCount"
-         ).innerText =
+        document.getElementById(
+        "viewsCount"
+        ).innerText =
 
-         artist.views || 0;
+        artist
+        ? artist.views || 0
+        : 0;
 
-         document.getElementById(
-         "followersCount"
-         ).innerText =
+        document.getElementById(
+        "followersCount"
+        ).innerText =
 
-         artist.followers || 0;
+        artist
+        ? artist.followers || 0
+        : 0;
 
-          document.getElementById(
-          "reviewsCount"
-          ).innerText =
+        document.getElementById(
+        "reviewsCount"
+        ).innerText =
 
-          artist.reviews || 0;
+        artist
+        ? artist.reviews || 0
+        : 0;
 
         if(!artist){
 
