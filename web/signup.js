@@ -104,3 +104,50 @@ async () => {
     }
 
 });
+    
+     /* SHOW/HIDE SIGNUP PASSWORD */
+
+      const signupPassword =
+      document.getElementById(
+      "signupPassword"
+     );
+
+     const toggleSignupPassword =
+     document.getElementById(
+     "toggleSignupPassword"
+     );
+
+    if(toggleSignupPassword){
+
+     toggleSignupPassword.addEventListener(
+
+      "click",
+
+     () => {
+
+     if(
+
+      signupPassword.type ===
+     "password"
+
+     ){
+
+        signupPassword.type =
+        "text";
+
+        toggleSignupPassword.innerText =
+        "Hide";
+
+    } else {
+
+        signupPassword.type =
+        "password";
+
+        toggleSignupPassword.innerText =
+        "Show";
+
+    }
+
+});
+
+}

@@ -1270,3 +1270,17 @@ textarea{
 
   box-sizing:border-box;
 }
+
+#toggleLoginPassword,
+#toggleSignupPassword{
+
+  margin-top:10px;
+
+  background:none;
+
+  border:none;
+
+  color:#ffcc00;
+
+  cursor:pointer;
+}
