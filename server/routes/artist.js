@@ -213,24 +213,24 @@ async (req, res) => {
 
 });
 
-       /* UPDATE ARTIST */
+/* UPDATE ARTIST */
 
-   router.put(
+router.put(
 
-   "/update/:userId",
+"/update/:userId",
 
-   upload.single("image"),
+upload.single("image"),
 
-  async (req, res) => {
+async (req, res) => {
 
     try {
 
         const {
 
-          name,
-          category,
-          bio,
-          phone
+            name,
+            category,
+            bio,
+            phone
 
         } = req.body;
 
@@ -248,9 +248,11 @@ async (req, res) => {
         if(req.file){
 
             updateData.image =
-            req.file.filename;
+            req.file.path;
 
         }
+
+        const updatedArtist =
 
         await Artist.findOneAndUpdate(
 
@@ -260,7 +262,13 @@ async (req, res) => {
 
         },
 
-        updateData
+        updateData,
+
+        {
+
+            new:true
+
+        }
 
         );
 
@@ -269,7 +277,9 @@ async (req, res) => {
             success:true,
 
             message:
-            "Artist updated"
+            "Artist updated",
+
+            artist:updatedArtist
 
         });
 
@@ -286,7 +296,6 @@ async (req, res) => {
     }
 
 });
-
            /* FEATURED TOGGLE */
 
         router.put(

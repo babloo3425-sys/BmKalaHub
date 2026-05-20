@@ -53,15 +53,19 @@ whatsappBtn.addEventListener(
 
 () => {
 
+    const cleanPhone =
+
+    artist.phone.replace(/\D/g,"");
+
     window.open(
 
-    `https://wa.me/${artist.phone}`,
+    `https://wa.me/91${cleanPhone}`,
 
-    "_blank"
+     "_blank"
 
     );
 
-});
+    });
 
     /* BOOKING FORM */
 
