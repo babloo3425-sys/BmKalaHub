@@ -318,6 +318,7 @@ searchInput.addEventListener(
 
         artistsGrid.innerHTML += `
 
+        
         <div class="artistCard">
 
             <img

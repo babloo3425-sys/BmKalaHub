@@ -1,4 +1,4 @@
-   const createArtistSubmit =
+const createArtistSubmit =
 document.getElementById(
 "createArtistSubmit"
 );
@@ -10,6 +10,7 @@ createArtistSubmit.addEventListener(
 async (e) => {
 
     e.preventDefault();
+
     const user =
     JSON.parse(
     localStorage.getItem("user")
@@ -73,10 +74,14 @@ async (e) => {
     phone
     );
 
-    formData.append(
-    "image",
-    image
-    );
+    if (image) {
+
+        formData.append(
+        "image",
+        image
+        );
+
+    }
 
     try {
 
@@ -93,29 +98,40 @@ async (e) => {
         });
 
         const data =
-         await res.json();
+        await res.json();
 
-         localStorage.setItem(
+        if (data.success && data.artist) {
 
-         "artist",
+            localStorage.setItem(
 
-          JSON.stringify(
-          data.artist
-        )
+            "artist",
 
-        );
+            JSON.stringify(
+            data.artist
+            )
 
-          artistMessage.innerText =
-          data.message;
+            );
 
-          window.location.href =
-         "dashboard.html";
+            artistMessage.innerText =
+            "Artist Created Successfully";
 
-     } catch(err){
+            window.location.href =
+            "dashboard.html";
+
+        } else {
+
+            artistMessage.innerText =
+            data.message;
+
+        }
+
+    } catch(err){
+
+        console.log(err);
 
         artistMessage.innerText =
         "Server Error";
 
-      }
+    }
 
-    });
+});
