@@ -35,6 +35,14 @@ async function loadMyArtist(){
 
         const artist =
         data.artist;
+       
+        if (artist) {
+
+       document.getElementById(
+       "createArtistBtn"
+       ).style.display = "none";
+
+     }
 
         document.getElementById(
         "viewsCount"
