@@ -38,9 +38,17 @@ async function loadMyArtist(){
        
         if (artist) {
 
+       const createBtn =
        document.getElementById(
        "createArtistBtn"
-       ).style.display = "none";
+      );
+
+     if (createBtn) {
+
+        createBtn.style.display =
+        "none";
+
+      }
 
      }
 
@@ -198,90 +206,97 @@ async () => {
         });
 
         const data =
-        await res.json();
+await res.json();
 
-        alert(data.message);
+alert(data.message);
 
-        window.location.href =
-        "index.html";
+window.location.href =
+"index.html";
 
-    } catch(err){
+} catch(err){
 
-        console.log(err);
+    console.log(err);
 
-    }
+}
 
 });
 
-        /* EDIT PROFILE */
+/* EDIT PROFILE */
 
-    const editProfileBtn =
-    document.getElementById(
-    "editProfileBtn"
-   );
+const editProfileBtn =
+document.getElementById(
+"editProfileBtn"
+);
+
+if (editProfileBtn) {
 
     editProfileBtn.addEventListener(
 
-   "click",
+    "click",
 
-   () => {
+    () => {
 
-    window.location.href =
-    "edit-artist.html";
+        window.location.href =
+        "edit-artist.html";
 
-});
+    });
 
-      /* FEATURED */
+}
+
+/* FEATURED */
 
 const featuredBtn =
 document.getElementById(
 "featuredBtn"
 );
 
-featuredBtn.addEventListener(
+if (featuredBtn) {
 
-"click",
+    featuredBtn.addEventListener(
 
-async () => {
+    "click",
 
-    try {
+    async () => {
 
-        const res = await fetch(
+        try {
 
-        `https://bmkalahub-api.onrender.com/api/artist/featured/${user._id}`,
+            const res = await fetch(
 
-        {
+            `https://bmkalahub-api.onrender.com/api/artist/featured/${user._id}`,
 
-            method:"PUT"
+            {
 
-        });
+                method:"PUT"
 
-        const data =
-        await res.json();
+            });
 
-        if(data.featured){
+            const data =
+            await res.json();
 
-            featuredBtn.innerText =
-            "Featured ⭐";
+            if(data.featured){
 
-        } else {
+                featuredBtn.innerText =
+                "Featured ⭐";
 
-            featuredBtn.innerText =
-            "Make Featured";
+            } else {
+
+                featuredBtn.innerText =
+                "Make Featured";
+
+            }
+
+        } catch(err){
+
+            console.log(err);
 
         }
 
-    } catch(err){
+    });
 
-        console.log(err);
-
-    }
-
-});
-
+ }
     /* LOAD BOOKINGS */
 
-async function loadBookings(){
+  async function loadBookings(){
 
     try {
 
