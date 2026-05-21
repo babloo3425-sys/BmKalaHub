@@ -438,16 +438,15 @@ categoryCards.forEach((card) => {
 
         <div class="artistCard">
 
-           <img
-            src="${
-            artist.image
+          <img
+           src="${
+           artist.image &&
+           artist.image.startsWith("http")
           ? artist.image
-         : 'https://via.placeholder.com/400x300?text=Artist'
-         }"
-           class="artistImg"
-
-        onerror="this.onerror=null;this.src='https://via.placeholder.com/400x300?text=Artist';"
-        >
+        : 'https://via.placeholder.com/400x300?text=Artist'
+          }"
+          class="artistImg"
+           >
             <h3>
 
               ${artist.name}
