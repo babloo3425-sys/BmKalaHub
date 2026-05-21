@@ -446,8 +446,8 @@ categoryCards.forEach((card) => {
          }"
            class="artistImg"
 
-         onerror="this.src='https://via.placeholder.com/400x300?text=Artist'"
-         >
+        onerror="this.onerror=null;this.src='https://via.placeholder.com/400x300?text=Artist';"
+        >
             <h3>
 
               ${artist.name}
