@@ -318,7 +318,7 @@ searchInput.addEventListener(
 
         artistsGrid.innerHTML += `
 
-        
+
         <div class="artistCard">
 
             <img
@@ -438,14 +438,14 @@ categoryCards.forEach((card) => {
 
         <div class="artistCard">
 
-            <img
-            src="${
-            artist.image
-            ? artist.image
-            : 'https://via.placeholder.com/400x300?text=Artist'
-            }"
-            class="artistImg">
-
+           <img
+           src="${
+           artist.image &&
+           artist.image !== "null"
+          ? artist.image
+          : 'https://via.placeholder.com/400x300?text=Artist'
+          }"
+             class="artistImg">
             <h3>
 
               ${artist.name}
