@@ -59,6 +59,17 @@
             phone
 
         } = req.body;
+        
+        const existingArtist = await Artist.findOne({
+        userId
+    });
+
+        if (existingArtist) {
+        return res.json({
+        success:false,
+        message:"Artist profile already exists"
+     });
+    }
 
         const image =
 

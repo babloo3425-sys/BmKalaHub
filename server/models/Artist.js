@@ -3,7 +3,11 @@
      const artistSchema =
      new mongoose.Schema({
 
-     userId:String,
+     userId: {
+     type: String,
+     required: true,
+     unique: true
+    },
 
      name:String,
 
