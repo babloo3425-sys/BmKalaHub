@@ -1,8 +1,3 @@
- let artist =
- JSON.parse(
- localStorage.getItem("artist")
- );
-
  const user =
 
  JSON.parse(
@@ -30,27 +25,48 @@ async function loadMyArtist(){
 
         );
 
-        const data =
-        await res.json();
+       const data =
+await res.json();
 
-        const artist =
-        data.artist;
-       
-        if (artist) {
+const artist =
+data.artist;
 
-       document.getElementById(
-       "createArtistBtn"
-       ).style.display = "none";
+if (artist) {
 
-     }
+    document.getElementById(
+    "createArtistBtn"
+    ).style.display = "none";
 
-        document.getElementById(
-        "viewsCount"
-        ).innerText =
+    dashboardArtist.innerHTML = `
 
-        artist
-        ? artist.views || 0
-        : 0;
+    <div class="artistCard">
+
+    <img
+    src="${artist.image}"
+    class="artistImage"
+    />
+
+    <h2>${artist.name}</h2>
+
+    <p>${artist.category}</p>
+
+    <p>${artist.bio}</p>
+
+    <p>${artist.phone}</p>
+
+    </div>
+
+    `;
+
+}
+
+document.getElementById(
+"viewsCount"
+).innerText =
+
+artist
+? artist.views || 0
+: 0;
 
         document.getElementById(
         "followersCount"
