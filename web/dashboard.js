@@ -1,7 +1,7 @@
  let artist =
- JSON.parse(
- localStorage.getItem("artist")
- );
+JSON.parse(
+localStorage.getItem("artist")
+) || {};
 
  const user =
 
