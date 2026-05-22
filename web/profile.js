@@ -804,4 +804,26 @@ loadReviews();
 
 refreshArtist();
 
+      const backBtn =
+      document.getElementById("backBtn");
+
+      backBtn.addEventListener("click", () => {
+
+      const lastPage =
+      localStorage.getItem("lastPage");
+
+      if(lastPage){
+
+        window.location.href =
+        lastPage;
+
+     } else {
+
+        window.location.href =
+        "index.html";
+
+    }
+
+});
+
     

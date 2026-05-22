@@ -15,6 +15,11 @@ viewBtns.forEach((btn, index) => {
 
         );
 
+        localStorage.setItem(
+        "lastPage",
+         window.location.href
+     );
+
         window.location.href =
         "profile.html";
 
