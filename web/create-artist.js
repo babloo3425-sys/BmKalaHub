@@ -120,24 +120,27 @@ async (e) => {
 
         } else {
 
-         artistMessage.innerText =
-         data.message;
+    artistMessage.innerText =
+    data.message;
 
-          if(
+    if(
 
-          data.message ===
+    data.message ===
 
-          "Artist profile already exists"
+    "Artist profile already exists"
 
-           ){
+    ){
 
-          window.location.href =
-          "dashboard.html";
+        setTimeout(() => {
 
-        }
+            window.location.href =
+            "dashboard.html";
 
-       }
+        }, 1000);
 
+    }
+
+}
     } catch(err){
 
         console.log(err);
