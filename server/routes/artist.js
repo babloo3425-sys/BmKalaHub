@@ -65,11 +65,19 @@
     });
 
         if (existingArtist) {
-        return res.json({
-        success:false,
-        message:"Artist profile already exists"
-     });
-    }
+
+    return res.json({
+
+        success:true,
+
+        message:
+        "Artist profile already exists",
+
+        artist:existingArtist
+
+    });
+
+}
 
         const image =
 
