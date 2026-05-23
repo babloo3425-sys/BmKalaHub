@@ -68,7 +68,7 @@
 
     return res.json({
 
-        success:true,
+        success:false,
 
         message:
         "Artist profile already exists",
