@@ -16,6 +16,8 @@ async (e) => {
     localStorage.getItem("user")
     );
 
+    console.log(user);
+
     const name =
     document.getElementById(
     "artistName"
