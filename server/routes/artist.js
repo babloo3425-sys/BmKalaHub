@@ -60,17 +60,17 @@
 
         } = req.body;
      
-        if(!userId){
+        if(!userId || userId === "undefined"){
 
     return res.json({
 
         success:false,
 
-        message:"User ID missing"
+        message:"Invalid User ID"
 
     });
 
-}   
+}
 
         const existingArtist = await Artist.findOne({
         userId
