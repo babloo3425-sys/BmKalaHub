@@ -59,7 +59,19 @@
             phone
 
         } = req.body;
-        
+     
+        if(!userId){
+
+    return res.json({
+
+        success:false,
+
+        message:"User ID missing"
+
+    });
+
+}   
+
         const existingArtist = await Artist.findOne({
         userId
     });

@@ -11,14 +11,27 @@ async (e) => {
 
     e.preventDefault();
 
-    const user =
-    JSON.parse(
-    localStorage.getItem("user")
-    );
+    const userData =
+localStorage.getItem("user");
 
-    console.log(user);
+if(!userData){
 
-    const name =
+    alert("Please login again");
+
+    window.location.href =
+    "login.html";
+
+    return;
+
+}
+
+const user =
+JSON.parse(userData);
+
+console.log(user);
+ 
+console.log(user._id);
+const name =
     document.getElementById(
     "artistName"
     ).value;
