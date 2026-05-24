@@ -61,6 +61,13 @@ const name =
     "artistMessage"
     );
 
+    if(!user._id){
+
+    artistMessage.innerText =
+    "Please login again";
+
+    return;
+
     const formData =
     new FormData();
 
