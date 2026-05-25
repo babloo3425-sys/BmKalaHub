@@ -101,21 +101,51 @@ nav{
   padding:10px 20px 0;
 }
 
-.card{
-  background:#1f1f1f;
-  padding:14px;
-  border-radius:14px;
-  text-align:center;
-  font-size:18px;
+.categoryCard{
+
+  display:flex;
+
+  align-items:center;
+
+  gap:22px;
+
+  background:#161616;
+
+  padding:18px;
+
+  border-radius:22px;
+
   cursor:pointer;
+
   transition:0.3s;
+
 }
 
-.card:hover{
-  transform:translateY(-5px);
-  background:#2b2b2b;
+.categoryCard:hover{
+
+  transform:translateY(-4px);
+
+  background:#222222;
+
 }
 
+.categoryCard img{
+
+  width:70px;
+
+  height:70px;
+
+  object-fit:contain;
+
+}
+
+.categoryCard span{
+
+  font-size:34px;
+
+  font-weight:500;
+
+}
 /* MOBILE */
 
 @media(max-width:700px){
@@ -133,9 +163,11 @@ nav{
     font-size:16px;
   }
 
-  .card{
-    font-size:20px;
-  }
+  .categoryCard span{
+
+  font-size:22px;
+
+}
 
 }
 
